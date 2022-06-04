@@ -1,0 +1,121 @@
+#product_wrap {
+  position: relative;
+  min-height: var(--product-navigate-height);
+  display: flex;
+  padding: 10px 0;
+
+  & > #product_navigate {
+    width: var(--product-navigate-width);
+    height: var(--product-navigate-height);
+    background-color: #fff;
+    color: #111827;
+    & > #product_navigate--head {
+      padding: 10px 15px;
+      text-align: center;
+
+      & > h1 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    & > .product_navigate--item {
+      margin: 10px 0;
+
+      & > .active {
+        padding-left: 50px;
+        background-color: #111827;
+        color: #fff;
+      }
+
+      & > a {
+        display: block;
+        padding: 10px 15px;
+        font-size: 20px;
+        text-transform: capitalize;
+        transition: all 0.3s linear;
+        border-radius: 8px;
+
+        &:hover {
+          padding-left: 50px;
+          background-color: #111827;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  & > #children_wrap {
+    min-height: var(--product-navigate-height);
+    // margin-left: var(--product-navigate-width);
+    width: 100%;
+    position: relative;
+
+    #product_list {
+      padding: 10px 20px;
+    }
+  }
+}
+
+#detail_product--wrap {
+  padding-left: 20px;
+
+  #detail_product--image {
+    background-position: center;
+    background-size: cover;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+  }
+
+  .detail_product--content {
+    padding: 20px;
+
+    .product_quantity_btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ion-icon {
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 8px;
+        transition: all 0.2s linear;
+        &:hover {
+          cursor: pointer;
+          background-color: #ccc;
+        }
+      }
+    }
+
+    & > #detail_product--name {
+    }
+
+    & > #detail_product--desc {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+
+    & > #detail_product--size {
+      padding: 30px 0;
+      .btn-size {
+        background-color: #fff;
+        padding: 8px 0;
+        border: 2px solid #ccc;
+
+        &.active {
+          border-color: #6c6ff1;
+        }
+      }
+    }
+
+    & > .add_to_cart_btn {
+      width: 250px;
+      margin: auto;
+      padding: 10px 0;
+      color: #fff;
+      text-transform: capitalize;
+      background-color: #6c6ff1;
+    }
+  }
+}

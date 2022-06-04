@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header-height: 60px;
+  --footer-height: 250px;
+  --product-navigate-height: calc(
+    100vh - var(--header-height) - var(--footer-height)
+  );
+  --product-navigate-width: 350px;
+  --vl-avatar-profile: 150px;
+}
+
+.btn {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+/* .btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: rgba(17, 24, 39, 0.4);
+  transition: width 0.2s linear;
+}
+
+.btn:hover.btn::after {
+  width: 100%;
+} */
+
+.product--item {
+  width: 350px;
+}
+
+.product_image {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.product_info {
+  padding: 10px 20px;
+}
+
+.product_name {
+  padding: 10px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.product_price {
+  padding: 10px 0 5px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+#spin_wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#spin_item {
+  --values: 65px;
+  width: var(--values);
+  height: var(--values);
+  background-color: transparent;
+  border: 8px solid #ccc;
+  border-radius: 100%;
+  border-right-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
